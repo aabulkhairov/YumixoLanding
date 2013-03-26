@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+  background-color: #ffffff;
+  background-image: url(../images/landing-page-tour-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+}
+#nav-bar .navbar-inner {
+  border: none;
+  background: rgba(255, 255, 255, 0.278431);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.0666667);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.0666667);
+  -o-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.0666667);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.0666667);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#nav-bar .brand {
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+#nav-bar .brand .icon.icon-bolt {
+  margin: 2px 0px 0px -7px;
+  font-size: 14px;
+  height: 14px;
+  width: 14px;
+}
+#nav-bar .nav li a {
+  text-shadow: none;
+  color: #ffffff;
+  line-height: 22px;
+}
+#hero-container {
+  padding: 60px 0px 60px 0px;
+}
+#title {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.129412);
+  font-family:"proxima-nova";
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  width: 940px;
+}
+#subtitle {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.168627);
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  color: #f0f0f0;
+}
+#signup-form {
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.227451);
+  background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  margin: 0px 0px 60px 0px;
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+}
