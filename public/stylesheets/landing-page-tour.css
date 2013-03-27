@@ -39,10 +39,10 @@ body {
 }
 #title {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.129412);
-  font-family:"proxima-nova";
   font-size: 50px;
   color: #ffffff;
   text-align: center;
+  font-family:"proxima-nova";
   width: 940px;
 }
 #subtitle {
@@ -51,23 +51,11 @@ body {
   font-size: 20px;
   text-align: center;
   color: #f0f0f0;
+  font-family:"proxima-nova";
 }
 #hero-container .image.image-1 {
   margin-top: 20px;
 }
 #hero-container .image.image-2 {
   margin-top: 30px;
-}
-#signup-form {
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.227451);
-  background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
-  background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
-  background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
-  margin: 0px 0px 60px 0px;
-  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
-  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
-  -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
-  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
 }
