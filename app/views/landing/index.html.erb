@@ -1,6 +1,15 @@
-<div class="navbar navbar-fixed-top" id="nav-bar">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-fixed-top" id="nav-bar">
       <div class="navbar-inner">
-        <a class="brand" href="#"> <i class="icon icon-bolt"></i> Yumixo​</a>
+        <a class="brand" href="#">Yumixo​</a>
         <ul class="nav pull-right">
           <li>
             <a href="#"></a>
@@ -9,17 +18,28 @@
       </div>
     </div>
     <div class="container" id="hero-container">
-      <h1 class="heading" id="title">It's about time for a date.</h1>
+      <h1 class="heading pull-center" id="title"> <strong>Step out for a date.</strong>
+
+      </h1>
       <h2 class="heading" id="subtitle">Yumixo is the easiest way to meet new people.</h2>
-    </div>
-    <div class="container">
-      <div class="row-fluid" id="signup-form-container">
-        <span class="span6 offset3">
-          <form class="form-horizontal" id="signup-form" action="">
-            <input class="textinput" type="text" placeholder="Type your email here" name="">
-            <button class="btn">Button</button>
-          </form>
-        </span>
+      <%= link_to image_tag("/images/download_on_the_app_store_badge_us-uk_135x40.png", :class => "pull-center image image-1"), "http://appstore.com/yumixo"%>
+      
+      <img src="images/iphone_dateslist.png" class="pull-center image image-2">
+      <div class="container" id="image-container-1"></div>
+      <div class="container">
+        <div class="row-fluid">
+          <span class="span6"></span>
+          <span class="span6"></span>
+        </div>
       </div>
+      <div class="social">
+			<div class="like-btn fb-like" data-href="http://www.facebook.com/Yumixo" data-send="false" data-layout="button_count" data-width="45" data-show-faces="false"></div>
+			<div class="like-btn twit">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://yumixo.com" data-text="Yumixo brings online dating back to real world: http://yumixo.com" data-via="YumixoCom" data-related="Yumixo" data-hashtags="Yumixo">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</div>
     </div>
+   
     <div class="container" id="image-container"></div>
+  </body>

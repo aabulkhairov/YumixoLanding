@@ -1,5 +1,5 @@
 html {
-  background-color: #ffffff;
+  background-color: #363636;
   background-image: url(../images/landing-page-tour-background.jpg);
   background-repeat: no-repeat;
   background-position: top center;
@@ -29,12 +29,6 @@ body {
   font-size: 16px;
   color: #ffffff;
 }
-#nav-bar .brand .icon.icon-bolt {
-  margin: 2px 0px 0px -7px;
-  font-size: 14px;
-  height: 14px;
-  width: 14px;
-}
 #nav-bar .nav li a {
   text-shadow: none;
   color: #ffffff;
@@ -47,8 +41,8 @@ body {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.129412);
   font-family:"proxima-nova";
   font-size: 50px;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
   width: 940px;
 }
 #subtitle {
@@ -57,6 +51,12 @@ body {
   font-size: 20px;
   text-align: center;
   color: #f0f0f0;
+}
+#hero-container .image.image-1 {
+  margin-top: 20px;
+}
+#hero-container .image.image-2 {
+  margin-top: 30px;
 }
 #signup-form {
   border-radius: 3px;
