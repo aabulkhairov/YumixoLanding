@@ -6,6 +6,6 @@ YumixoLandingEn::Application.routes.draw do
   match 'terms-of-service' => "landing#terms"
   match 'privacy-policy' => "landing#policy"
   # end of legal stuff
-  root :to => 'landing#index'
+  root :to => 'landing#candy'
   # match ':controller(/:action(/:id))(.:format)'
 end

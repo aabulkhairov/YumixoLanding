@@ -9,5 +9,9 @@ class LandingController < ApplicationController
   def terms
 
   end
+
+  def candy
+  	render :layout => 'candylayout'
+  end
   
 end
