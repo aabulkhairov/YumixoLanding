@@ -8,13 +8,15 @@ body {
   padding: 0;
   margin: 0;
 	background-image: url(landing-page-tour-background.jpg);
-	/*-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/
+  
   color: #eee;
-	/*background-repeat: no-repeat;
-	background-position: center;*/
+
+	background-position: center;
 	font-family: "proxima-nova", Helvetica, Arial, Sans;
 }
 
