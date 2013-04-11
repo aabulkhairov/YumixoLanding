@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+  	<%= image_tag "http://s3.amazonaws.com/yumixo-pro/original/52/0_78818_1c83cdf9_XL.jpeg" %>
+ 	<h1>Good news, everyone!</h1>
+    <p>
+      Новый пользователь оставил заявку на платформу на сайте Yumixo.ru. Он(-а) хочет следующие платформы:</p>
+    <ul>
+      <% if @lead.web_version %>
+        <li>Веб-версия Yumixo</li>
+      <% end %>
+      <% if @lead.android %>
+        <li>Версия приложения для Android</li>
+      <% end %>
+      <% if @lead.windows_phone %>
+        <li>Версия приложения для Windows Phone</li>
+      <% end %>
+    </ul>
+	<p>Мы записали его адрес e-mail: <%= @lead.email %> и будем отправлять на него новости в ближайшее время!</p>
+	<p>Итого на текущий момент у нас:</p>
+	<ul>
+		<li><%= @count_leads %> человек оставили свои e-mail адреса</li>
+		<ul>
+			<li><%= @count_web_version %> из них хотят веб-версию</li>
+			<li><%= @count_android %> из них хотят версию для Android</li>
+			<li><%= @count_windows_phone %> из них хотят версию для Windows Phone</li>
+		</ul>
+	</ul>
+	<p>Ашот <%= link_to "Yumixo", "http://yumixo.ru" %></p>
+  </body>
+</html>

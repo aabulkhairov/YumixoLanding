@@ -1,0 +1,34 @@
+<div id="wrap">
+	<div class="header-container">
+    <header class="wrapper clearfix">	
+    	<%= image_tag 'android.png' %>
+    	<div class="ctaColumn">
+		<p>В данный момент мы поддерживаем только iOS. Поделитесь с нами, что вы любите использовать и мы обязательно это реализуем.</p>
+		<legend>Укажите платформу, которую хотите</legend>
+
+		<% if !session[:error_message].blank? %>
+			<div class="alert alert-danger">
+			<%= session[:error_message].html_safe %>
+			<% session[:error_message] = nil %>
+			</div>
+		<% end %>
+
+		<!-- INSERT FORM // Insert your own sign up field  -->
+        <h4>Get notified when we launch</h4>
+        
+		<%= form_for :lead, :url => {:controller => "landing", :action => "save_email"}, :html => {:class => 'signup'} do |f| %>
+			
+			<%= f.email_field :email, :placeholder => 'Ваш e-mail', :class => 'span6' %>
+			<br />
+			<%= f.check_box :web_version %> Хочу веб-версию<br />
+			<%= f.check_box :android %> Хочу версию для Android <br />
+			<%= f.check_box :windows_phone %> Хочу версию для Windows Phone <br/>
+			<br />
+			<%= f.button "Подписать меня на новости", :class => 'btn btn-success btn-block' %>
+			
+		<% end %>
+	</div>
+    </header>
+  </div>
+</div>
+

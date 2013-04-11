@@ -51,6 +51,19 @@ YumixoLandingEn::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  # !!! Added by ME!!
+     config.action_mailer.perform_deliveries = true
+       config.action_mailer.default_url_options = { :host => 'yumixo.com' }
+       config.action_mailer.delivery_method = :smtp
+       config.action_mailer.smtp_settings = {
+         :address              => 'smtp.mandrillapp.com',#{}"smtp.sendgrid.net",
+         :port                 => 587,
+         :domain               => 'yumixo.com',
+         :user_name            => 'yumixo',#'epyumixo',
+         :password             => '40e34c12-2caf-43ef-bdea-8fcea4b88962',#'SsGg050525',
+         :authentication       => 'plain',
+         :enable_starttls_auto => true  }
+
   # Enable threaded mode
   # config.threadsafe!
 
@@ -64,4 +77,8 @@ YumixoLandingEn::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  ENV['KEEN_PROJECT_ID'] = '5e5d8628583644719597b11a168abdf2'
+  ENV['KEEN_API_KEY'] = '661863AD472C51FFAABEBC16FC116BED'
+  
 end

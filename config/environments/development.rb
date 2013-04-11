@@ -16,6 +16,19 @@ YumixoLandingEn::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+  # !!! Added by ME!!
+     config.action_mailer.perform_deliveries = true
+       config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+       config.action_mailer.delivery_method = :smtp
+       config.action_mailer.smtp_settings = {
+         :address              => 'smtp.mandrillapp.com',#{}"smtp.sendgrid.net",
+         :port                 => 587,
+         :domain               => 'yumixo.com',
+         :user_name            => 'yumixo',#'epyumixo',
+         :password             => '40e34c12-2caf-43ef-bdea-8fcea4b88962',#'SsGg050525',
+         :authentication       => 'plain',
+         :enable_starttls_auto => true  }
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -34,4 +47,9 @@ YumixoLandingEn::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ENV['KEEN_PROJECT_ID'] = '5e5d8628583644719597b11a168abdf2'
+  ENV['KEEN_API_KEY'] = '661863AD472C51FFAABEBC16FC116BED'
+
+  
 end
