@@ -1,8 +1,9 @@
-<div id="wrap">
-	<div class="header-container">
-    <header class="wrapper clearfix">	
-    	<%= image_tag 'android.png' %>
-    	<div class="ctaColumn">
+<div class="row">
+	<div class="span5">
+		<%= image_tag 'android.png' %>
+	</div>
+	<div class="span6">
+
 		<p>В данный момент мы поддерживаем только iOS. Поделитесь с нами, что вы любите использовать и мы обязательно это реализуем.</p>
 		<legend>Укажите платформу, которую хотите</legend>
 
@@ -14,8 +15,8 @@
 		<% end %>
 
 		<!-- INSERT FORM // Insert your own sign up field  -->
-        <h4>Get notified when we launch</h4>
-        
+		<h4>Get notified when we launch</h4>
+
 		<%= form_for :lead, :url => {:controller => "landing", :action => "save_email"}, :html => {:class => 'signup'} do |f| %>
 			
 			<%= f.email_field :email, :placeholder => 'Ваш e-mail', :class => 'span6' %>
@@ -28,7 +29,4 @@
 			
 		<% end %>
 	</div>
-    </header>
-  </div>
 </div>
-

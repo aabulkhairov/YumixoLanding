@@ -1,7 +1,6 @@
 # encoding: UTF-8
 class LandingController < ApplicationController
 
-layout "landylayout"
   def index
   end
 
@@ -23,7 +22,7 @@ layout "landylayout"
   end  
 
   def subscribe
-    render :layout => 'landylayout'
+    #render :layout => 'landylayout'
     @lead = Lead.new
     @lead.android = false
     @lead.web_version = false
