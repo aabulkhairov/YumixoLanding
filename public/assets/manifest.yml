@@ -11,6 +11,8 @@ iphone_dateslist.png: iphone_dateslist-57301f6fb185df4a75ae327aa493d7fb.png
 iphone_dateslist/index.png: iphone_dateslist-57301f6fb185df4a75ae327aa493d7fb.png
 landing-page-tour-background.jpg: landing-page-tour-background-05cad232d97bfae7472dc121ce1ee051.jpg
 landing-page-tour-background/index.jpg: landing-page-tour-background-05cad232d97bfae7472dc121ce1ee051.jpg
+playstore.png: playstore-1d13210812341858679f2d46a1341d19.png
+playstore/index.png: playstore-1d13210812341858679f2d46a1341d19.png
 application.js: application-3f3f4790264e0f358f1a04379be33840.js
 application/index.js: application-3f3f4790264e0f358f1a04379be33840.js
 application.css: application-bd6368edca12af0dafd1c1ecef991adc.css
