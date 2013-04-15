@@ -14,9 +14,6 @@
   <meta name="twitter:app:id:iphone" content="525256014">
   <meta name="twitter:app:url:iphone" content="yumixo://open_date/12">
 
-  <script type="text/javascript" src="//use.typekit.net/bor1tjv.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
   <meta name="keywords" content="dating,meeting,online dating,hipster dating,free online dating service,adult girls dating,guys dating,find date,date,offline dating,eater dating">
 
 	<meta name="description" content="Yumixo mobile app uses geo-location functionality to help singles to find dates nearby. Dates are the core of the Yumixo experience. People can post date suggestions either to the community overall, or they can invite someone specific. For example, a person can post a date: “let’s take a salsa lesson and then test our moves at the Cinco de Mayo party”. Potential matches may reply by indicating their interest in this date. If both parties are interested, they can settle on specifics of the meeting by safely communicating within the application, without revealing their phone number of email address. In addition to finding the dates, the app allows to find other singles in the vicinity.">
@@ -43,6 +40,12 @@
 <body>
 
 <%= yield %>
-
+<!-- LOAD SCRIPTS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+    <!--<script src="js/retina.js"></script>-->
+    <script defer src="js/jquery.flexslider-min.js"></script>
+  <script src="js/main.js"></script>
+<%= render 'layouts/some_javascripts' %>
 </body>
 </html>

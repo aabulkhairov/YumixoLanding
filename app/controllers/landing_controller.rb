@@ -22,7 +22,6 @@ class LandingController < ApplicationController
   end  
 
   def subscribe
-    #render :layout => 'landylayout'
     @lead = Lead.new
     @lead.android = false
     @lead.web_version = false
@@ -36,14 +35,15 @@ class LandingController < ApplicationController
       @lead.windows_phone = true
     end
     #@mixpanel.track("Started filling form", {:email => @lead.email})
+    
   end
 
-   def download
+  def download
     render :layout => 'landylayout'
-   end
+  end
    
-   def save_email
-    @lead = Lead.new(params[:lead])
+  def save_email
+  @lead = Lead.new(params[:lead])
     if !Lead.find_by_email(@lead.email).blank?
       session[:error_message] = "E-mail #{@lead.email} уже зарегистрирован у нас"
       render('subscribe')
@@ -65,6 +65,6 @@ class LandingController < ApplicationController
         render('subscribe ')
      end
     end
-   end
+  end
   
 end

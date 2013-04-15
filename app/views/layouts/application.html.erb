@@ -13,9 +13,6 @@
   <meta name="twitter:app:id:iphone" content="525256014">
   <meta name="twitter:app:url:iphone" content="yumixo://open_date/12">
 
-  <script type="text/javascript" src="//use.typekit.net/bor1tjv.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
   <meta name="keywords" content="dating,meeting,online dating,hipster dating,free online dating service,adult girls dating,guys dating,find date,date,offline dating,eater dating">
 
 	<meta name="description" content="Yumixo mobile app uses geo-location functionality to help singles to find dates nearby. Dates are the core of the Yumixo experience. People can post date suggestions either to the community overall, or they can invite someone specific. For example, a person can post a date: “let’s take a salsa lesson and then test our moves at the Cinco de Mayo party”. Potential matches may reply by indicating their interest in this date. If both parties are interested, they can settle on specifics of the meeting by safely communicating within the application, without revealing their phone number of email address. In addition to finding the dates, the app allows to find other singles in the vicinity.">
@@ -37,25 +34,11 @@
 		})();
 	</script>
 
-	<script type="text/javascript">
-  var _kmq = _kmq || [];
-  var _kmk = _kmk || 'acd220be1aa8916f6006271bab90c54db37db266';
-  function _kms(u){
-    setTimeout(function(){
-      var d = document, f = d.getElementsByTagName('script')[0],
-      s = d.createElement('script');
-      s.type = 'text/javascript'; s.async = true; s.src = u;
-      f.parentNode.insertBefore(s, f);
-    }, 1);
-  }
-  _kms('//i.kissmetrics.com/i.js');
-  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
-  </script>
-
 </head>
 <body>
 <div class="container">
 <%= yield %>
 </div>
+<%= render 'layouts/some_javascripts' %>
 </body>
 </html>

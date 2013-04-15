@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: yumixo_landing_en_production
   pool: 5
-  username: yumixo_landing_en
+  username: almas
   password:

@@ -39,7 +39,12 @@
 </head>
 <body style="margin:0; padding:10px 0;" bgcolor="#ebebeb" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
-<br>
+<table border="0" width="100%" height="20" cellpadding="0" cellspacing="0" bgcolor="#ebebeb">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<!-- <br> -->
 
 <!-- 100% wrapper (grey background) -->
 <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ebebeb">
@@ -54,14 +59,14 @@
 
             <!-- ### BEGIN CONTENT ### -->
             <div style="font-weight: bold; font-size: 18px; line-height: 24px; color: #D03C0F">
-            Thank you for signing up!
+            Спасибо за ваш интерес!
             </div><br>
-
-            We at Yumixo are very happy that you are interested in our dating app Yumixo.
+            Мы в Yumixo рады, что вам интересен наш проект.
+            
             <br><br>
-            You might ask: "why Yumixo?". It's simple: <b>You + Me = X.O.</b>
+            Вы, может быть, спросите: "что значит Yumixo?". Все просто: <b>"You + Me = X.O.", что в прямом переводе значит "ты и я = поцелуи и объятия".</b>
             <br><br>
-            You told us that you want the following platforms:
+            Вы указали, что вас интересуют версии для следующих платформ
             <br>
             <ul>
               <% if @lead.web_version %>
@@ -74,15 +79,16 @@
                 <li>Версия приложения для Windows Phone</li>
               <% end %>
             </ul>
-            We have recorded your email <b><%= @lead.email %></b> and we will inform you when we are done with next version of Yumixo
+            Мы записали у себя ваш адрес <b><%= @lead.email %></b> и сообщим вам, когда выпустим новую версию Yumixo.
             <br>
             <br>
-            Almas from Yumixo
+            Алмас<br>
+            Yumixo
             <br>
             <a href="mailto:support@yumixo.com">almas@yumixo.com</a>
             <br>
             <br>
-            <p><%= link_to "Visit website", "http://yumixo.com" %></p>
+            <p><%= link_to "Посетить наш сайт", "http://yumixo.ru" %></p>
             <!-- ### END CONTENT ### -->
 
           </td>
@@ -94,6 +100,11 @@
   </tr>
 </table>
 <!--/100% wrapper-->
+<table border="0" width="100%" height="20" cellpadding="0" cellspacing="0" bgcolor="#ebebeb">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
 <br>
 <br>
 </body>

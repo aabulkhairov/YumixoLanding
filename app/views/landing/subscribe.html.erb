@@ -1,32 +1,34 @@
 <div class="row">
-	<div class="span5">
-		<%= image_tag 'android.png' %>
+	<div class="span6">
+		<div align="center">
+			<%= image_tag 'android.png', :size => '250x250' %>
+		</div>
 	</div>
 	<div class="span6">
 
-		<p>В данный момент мы поддерживаем только iOS. Поделитесь с нами, что вы любите использовать и мы обязательно это реализуем.</p>
-		<legend>Укажите платформу, которую хотите</legend>
+		<p>В данный момент мы поддерживаем только iOS. Поделитесь с нами, что вы любите использовать и мы обязательно это реализуем.</p>	
 
 		<% if !session[:error_message].blank? %>
 			<div class="alert alert-danger">
-			<%= session[:error_message].html_safe %>
-			<% session[:error_message] = nil %>
+				<%= session[:error_message].html_safe %>
+				<% session[:error_message] = nil %>
 			</div>
 		<% end %>
 
 		<!-- INSERT FORM // Insert your own sign up field  -->
-		<h4>Get notified when we launch</h4>
+		<h4>Подписаться, чтобы узнать первым</h4>
 
-		<%= form_for :lead, :url => {:controller => "landing", :action => "save_email"}, :html => {:class => 'signup'} do |f| %>
+		<%= form_for :lead, :url => {:controller => "landing", :action => "save_email"}, :html => {:class => 'form-horizontal'} do |f| %>
 			
 			<%= f.email_field :email, :placeholder => 'Ваш e-mail', :class => 'span6' %>
 			<br />
-			<%= f.check_box :web_version %> Хочу веб-версию<br />
-			<%= f.check_box :android %> Хочу версию для Android <br />
-			<%= f.check_box :windows_phone %> Хочу версию для Windows Phone <br/>
-			<br />
+
+			<%= f.check_box :web_version %> <%= f.label :web_version, "Хочу веб версию"%>
+			<%= f.check_box :android %> <%= f.label :android, "Хочу версию для Android" %>
+			<%= f.check_box :windows_phone %><%= f.label :windows_phone, "Хочу версию для Windows Phone"%>
 			<%= f.button "Подписать меня на новости", :class => 'btn btn-success btn-block' %>
 			
 		<% end %>
+		<p><%= link_to "Вернуться на главную", :root %></p>
 	</div>
 </div>
