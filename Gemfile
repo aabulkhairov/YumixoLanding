@@ -10,7 +10,7 @@ gem 'pg'
 gem 'keen' # Keen.IO's native gem
 gem 'em-http-request' # for making async calls
 # end of Keen #
-
+gem 'mixpanel'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

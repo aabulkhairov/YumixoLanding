@@ -1,5 +1,16 @@
 # encoding: UTF-8
 class LandingController < ApplicationController
+before_filter :initialize_mixpanel
+
+   def initialize_mixpanel
+      mix_panel_token = "cc36473896d6b730554c7156916e9d01"
+      if Rails.env.production?
+        mix_panel_token = "cc36473896d6b730554c7156916e9d01"
+      elsif Rails.env.development?
+        mix_panel_token = "3ce18c02e5494c43492445d3fee79af0"
+      end
+      @mixpanel ||= Mixpanel::Tracker.new(mix_panel_token, {:async => true})
+   end
 
   def index
   end
@@ -19,6 +30,10 @@ class LandingController < ApplicationController
   def landy
   	render :layout => 'landylayout'
     # Keen.publish("sign_ups", { :username => "lloyd", :referred_by => "harry" })
+    if !session[:already_visitor]
+      @mixpanel.track("Visited main page").delay
+      session[:already_visitor] = true
+    end
   end  
 
   def subscribe
@@ -34,8 +49,7 @@ class LandingController < ApplicationController
     elsif params[:platform] == "windows_phone"
       @lead.windows_phone = true
     end
-    #@mixpanel.track("Started filling form", {:email => @lead.email})
-    
+    @mixpanel.track("Started filling form", {:email => @lead.email}).delay
   end
 
   def download
@@ -57,7 +71,7 @@ class LandingController < ApplicationController
      if @lead.save
        flash[:notice] = "Спасибо за указанные данные! Они помогут нам в разработке!"
        # Mixpanel track events
-       #@mixpanel.track("Left e-mail for news", {:email => @lead.email}).delay
+       @mixpanel.track("Left e-mail for news", {:email => @lead.email, :android => @lead.android, :web_version => @lead.web_version, :windows_phone => @lead.windows_phone}).delay
 
        redirect_to({:controller => 'landing', :action => 'completed', :id => @lead.id})
      else
