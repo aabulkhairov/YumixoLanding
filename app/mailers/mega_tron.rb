@@ -9,7 +9,7 @@ class MegaTron < ActionMailer::Base
   
   def email_submit_notification(lead)
       @lead = lead
-      mail(:to => lead.email, :subject => "Hello from Yumixo!")
+      mail(:to => lead.email, :subject => "Привет от Yumixo!")
   end
 
   def notify_team_new_lead(lead,count,webs,androids,wps)
