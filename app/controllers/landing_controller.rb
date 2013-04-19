@@ -7,12 +7,13 @@ before_filter :initialize_mixpanel
       if Rails.env.production?
         mix_panel_token = "cc36473896d6b730554c7156916e9d01"
       elsif Rails.env.development?
-        mix_panel_token = "3ce18c02e5494c43492445d3fee79af0"
+        mix_panel_token = "1e0d28d2a8afc29212ae0c82bab0d120"
       end
       @mixpanel ||= Mixpanel::Tracker.new(mix_panel_token, {:async => true})
    end
 
   def index
+    
   end
 
   def policy
@@ -29,11 +30,18 @@ before_filter :initialize_mixpanel
 
   def landy
   	render :layout => 'landylayout'
+    source = 'direct'
+    if !params[:campaign].blank?
+      source = "Campaign: #{params[:campaign]}"
+    end
+
     # Keen.publish("sign_ups", { :username => "lloyd", :referred_by => "harry" })
     if !session[:already_visitor]
-      @mixpanel.track("Visited main page").delay
+      @mixpanel.track("Visited main page", {:source => source}).delay
       session[:already_visitor] = true
     end
+
+    
   end  
 
   def subscribe
