@@ -9,7 +9,7 @@ before_filter :initialize_mixpanel
       elsif Rails.env.development?
         mix_panel_token = "1e0d28d2a8afc29212ae0c82bab0d120"
       end
-      @mixpanel ||= Mixpanel::Tracker.new(mix_panel_token, {:async => true})
+      @mixpanel = Mixpanel::Tracker.new(mix_panel_token, {:async => true})
    end
 
   def index
